@@ -1,10 +1,27 @@
-import "./styles.css";
+import React from "react";
+import Sidebar from "./components/Sidebar";
+import Header from "./components/Header";
+import ContactList from "./components/Contact";
+import CustomerDetails from "./components/Customer";
+import Conversation from "./components/Convrsation";
+import ActionLauncher from "./components/Action";
+import "./app.css";
 
-export default function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+    <div className="app">
+      <Sidebar />
+      <div className="main-content">
+        <Header />
+        <div className="content-area">
+          <ContactList />
+          <CustomerDetails />
+          <Conversation />
+          <ActionLauncher />
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default App;
